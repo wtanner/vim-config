@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 
 " Setup Vundle to manage vim plugins from .vimrc
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " install bundles to ~/.vim/bundle
@@ -14,8 +14,8 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 
-Bundle 'fs111/pydoc.vim' " pydoc
-Bundle 'fholgado/minibufexpl.vim' " minibufexpl
+Bundle 'fs111/pydoc.vim' 
+Bundle 'fholgado/minibufexpl.vim'
 
 filetype on
 filetype plugin indent on
@@ -31,8 +31,6 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 inoremap <C-s> <esc>:w<cr>
 nnoremap <C-s> :w<cr>
-
-
 
 set mouse=a
 set number		" line numbers
