@@ -7,4 +7,6 @@ mkdir ~/.vim/_backup
 mkdir ~/.vim/_temp
 ln -s ~/.vim/.vimrc ~/.vimrc
 vim +BundleInstall +qall
-pip install jedi
+
+cd bundle/jedi-vim
+git submodule update --init
