@@ -8,14 +8,10 @@ call vundle#rc()
 " install bundles to ~/.vim/bundle
 Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
-
-" install snipmate and related dependencies
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-
+Bundle 'ervandew/supertab.git'
 Bundle 'fs111/pydoc.vim' 
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'bling/vim-airline'
 
 filetype on
 filetype plugin indent on
@@ -43,6 +39,7 @@ syntax on               " syntax highlighting
 set hlsearch            " highlight the last searched term
 set autoindent
 
+set laststatus=2
 set foldmethod=indent
 set foldlevel=99
 
