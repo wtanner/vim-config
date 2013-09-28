@@ -5,15 +5,8 @@ vim-config
 
 	cd ~
 	git clone git://github.com/wtanner/vim-config.git ./.vim
-    cd ~/.vim
-    git submodule init
-    git submodule update
-    git submodule foreach git submodule init
-    git submodule foreach git submodule update
-    mkdir ~/.vim/_backup
-    mkdir ~/.vim/_temp
-    ln -s ~/.vim/.vimrc ~/.vimrc
-    cd ~
+    	cd ~/.vim
+	./install.sh
 
 ## Steps used create this vim-config repository…
 
