@@ -8,6 +8,7 @@ call vundle#rc()
 " install bundles to ~/.vim/bundle
 Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab.git'
 Bundle 'fs111/pydoc.vim' 
 Bundle 'fholgado/minibufexpl.vim'
@@ -15,6 +16,9 @@ Bundle 'bling/vim-airline'
 
 filetype on
 filetype plugin indent on
+
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType python map <buffer> <f5> :w<cr>:!python %<cr>
 
 " Key mappings
 " Map CTRL-s as save, independent of mode
@@ -47,6 +51,8 @@ set foldlevel=99
 set noerrorbells
 
 set nosmartindent
+
+let g:SuperTabDefaultCompletionType = "context"
 
 " set CTAGS path
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
