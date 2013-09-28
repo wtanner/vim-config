@@ -31,7 +31,7 @@ vim-config
 
 ### 2. Add submodules
 
-	git submodule add http://github.com/tpope/vim-fugitive.git bundle/vundle
+	git submodule add https://github.com/gmarik/vundle.git bundle/vundle
 	git submodule init
 	git submodule update
 	git submodule foreach git submodule init
