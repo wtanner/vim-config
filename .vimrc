@@ -13,12 +13,14 @@ Bundle 'ervandew/supertab.git'
 Bundle 'fs111/pydoc.vim' 
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'bling/vim-airline'
+Bundle 'vimwiki/vimwiki'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 filetype on
 filetype plugin indent on
 
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType python map <buffer> <f5> :w<cr>:!python %<cr>
+" autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType python map <buffer> <F5> :w<cr>:!python %<cr>
 
 " Key mappings
 " Map CTRL-s as save, independent of mode
@@ -31,6 +33,12 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 inoremap <C-s> <esc>:w<cr>
 nnoremap <C-s> :w<cr>
+noremap <leader>s a <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+" imap <leader>s <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+noremap <leader>d a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+" imap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
+
+nnoremap ; :
 
 set mouse=a
 set number		" line numbers
@@ -56,11 +64,3 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " set CTAGS path
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-
-" When editing a file, always jump to the last cursor position
-autocmd BufReadPost *
-\ if ! exists("g:leave_my_cursor_position_alone") |
-\ if line("'\"") > 0 && line ("'\"") <= line("$") |
-\ exe "normal g'\"" |
-\ endif |
-\ endif
