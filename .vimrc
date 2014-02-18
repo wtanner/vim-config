@@ -19,12 +19,12 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 filetype on
 filetype plugin indent on
 
-" autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType python map <buffer> <F5> :w<cr>:!python %<cr>
 
 " Key mappings
 " Map CTRL-s as save, independent of mode
-let mapleader=","	" remap leader
+" let mapleader=","	" remap leader
 
 " remap window movement keys
 map <c-j> <c-w>j
@@ -33,22 +33,21 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 inoremap <C-s> <esc>:w<cr>
 nnoremap <C-s> :w<cr>
-noremap <leader>s a <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
-" imap <leader>s <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
-noremap <leader>d a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
-" imap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
-
-nnoremap ; :
+" noremap <leader>s a <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+" noremap <leader>d a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+noremap \ ,
 
 set mouse=a
 set number		" line numbers
 set ai                  " auto indenting
+set cursorline
 set si
 set wrap
 set history=100         " keep 100 lines of history
-set ruler               " show the cursor position
+" set ruler               " show the cursor position
 syntax on               " syntax highlighting
-set hlsearch            " highlight the last searched term
+" set hlsearch            " highlight the last searched term
+set incsearch
 set autoindent
 
 set laststatus=2
