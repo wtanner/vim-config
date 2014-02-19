@@ -35,7 +35,6 @@ inoremap <C-s> <esc>:w<cr>
 nnoremap <C-s> :w<cr>
 " noremap <leader>s a <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
 " noremap <leader>d a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
-noremap \ ,
 
 set mouse=a
 set number		" line numbers
@@ -44,9 +43,7 @@ set cursorline
 set si
 set wrap
 set history=100         " keep 100 lines of history
-" set ruler               " show the cursor position
 syntax on               " syntax highlighting
-" set hlsearch            " highlight the last searched term
 set incsearch
 set autoindent
 
@@ -56,8 +53,6 @@ set foldlevel=99
 
 " no error bells
 set noerrorbells
-
-set nosmartindent
 
 let g:SuperTabDefaultCompletionType = "context"
 
