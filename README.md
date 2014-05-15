@@ -1,14 +1,21 @@
 vim-config
 ==========
 
+There are two branches of this repository: "simple" and "complex". "simple" uses default vim 7.4.x properties and colorschemes, while "complex" includes add-ons such as command-t and vimwiki.
+
 ## Steps to clone and setup this vim-config
 
 	cd ~
 	git clone git://github.com/wtanner/vim-config.git ./.vim
     	cd ~/.vim
+
+        simple:
+          done!
+ 
+        complex:
 	./install.sh
 
-## Steps used create this vim-config repository…
+## Steps used create the "complex" vim-config repository:
 
 1. Initialize the repo
 2. Add submodules
